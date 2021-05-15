@@ -2,31 +2,12 @@
   <div class="home">
     <navbar></navbar>
     <carouselHome> </carouselHome>
-    
-    <div class="center-info"> 
-        <v-row align-content="space-around">
-          <v-col cols="12" sm="6" class="mx-0 px-0">
-            <v-card>
-              <v-img 
-              src="@/assets/media/holders/800x600.png"
-              max-height="600px"
-              max-width="100%"
-              ></v-img>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="6" class="mx-0 px-0">
-            <v-card>
-              <v-img 
-              src="@/assets/media/holders/800x600.png"
-              max-height="600px"
-              max-width="100%"
-              ></v-img>
-            </v-card>
-          </v-col>
-        </v-row>
-    </div>
+    <!--AGREGAR AQUI DISEÑO PARALAX PARA CUANDO HAGA SCROLL HACIA LAS IMAGENES 
+    SE BAJE A UN AXIS ESPECIFICO EN Y ; (QUE SE VEAN LAS 2 IMAGENES POR COMPLETO)  -->
+    <centerImages> </centerImages>
+    <seccion-noticias> </seccion-noticias>
     <div class="spacer"></div>
-  <footerHome></footerHome>
+    <footerHome></footerHome>
   </div>
 </template>
 
@@ -34,7 +15,9 @@
 // import  component  from '@/components/foler-name/component.vue'
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
-import carouselHome from "@/components/home/carousel.vue"
+import carouselHome from "@/components/home/carousel.vue";
+import centerImages from "@/components/home/centerImages.vue";
+import SeccionNoticias from "../components/home/seccionNoticias.vue";
 
 export default {
   name: "Home",
@@ -42,7 +25,9 @@ export default {
   components: {
     navbar,
     footerHome,
-    carouselHome
+    carouselHome,
+    centerImages,
+    SeccionNoticias,
   },
   data() {
     return {};
@@ -51,12 +36,8 @@ export default {
 </script>
 
 <style>
-.center-info{
-  display: block;
-}
-.spacer{
+.spacer {
   display: block;
   height: 20px;
 }
-
 </style>

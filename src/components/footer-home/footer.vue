@@ -1,32 +1,22 @@
 <template>
   <div class="footerHome">
-    <v-footer
-        color="#5D576B"
-        padless
-        height="150px"
-      >
-        <v-row
-          justify="center"
-          no-gutters
+    <v-footer color="#5D576B" padless height="150px">
+      <v-row justify="center" no-gutters>
+        <v-btn
+          v-for="link in links"
+          :key="link"
+          color="white"
+          text
+          rounded
+          class="my-2"
         >
-          <v-btn
-            v-for="link in links"
-            :key="link"
-            color="white"
-            text
-            rounded
-            class="my-2"
-          >
-            {{ link }}
-          </v-btn>
-          <v-col
-            class="py-4 text-center white--text"
-            cols="12"
-          >
-            {{ new Date().getFullYear() }} — <strong>XicoClass</strong>
-          </v-col>
-        </v-row>
-      </v-footer>
+          {{ link }}
+        </v-btn>
+        <v-col class="py-4 text-center white--text" cols="12">
+          {{ new Date().getFullYear() }} — <strong>XicoClass</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
   </div>
 </template>
 
@@ -36,15 +26,12 @@
 export default {
   name: "footerHome",
   component: {},
-  data: () => ({
-    links: [
-        'Inicio',
-        'Apartado Legal',
-        'Equipo',
-        'Acerca De'
-
-      ],
-  }),
+  data: () => {
+    return{
+      links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
+    };
+    
+  },
 };
 </script>
 

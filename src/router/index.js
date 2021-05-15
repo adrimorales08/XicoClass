@@ -6,18 +6,34 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "Login" */ "../views/Auth/Login.vue"),
+  },
+
+  {
+    path: "/Home",
     name: "Home",
     component: () => import(/* webpackChunkName: "Home" */ "../views/Home.vue"),
   },
+
   {
-    path: "/about",
+    path: "/About",
     name: "About",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/Biblioteca",
+    name: "Biblioteca",
+    component: () =>
+      import(/* webpackChunkName: "Home" */ "../views/Biblioteca.vue"),
+  },
 ];
 
 const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes,
 });
 

@@ -28,13 +28,13 @@
           <v-menu offset-y dark>
             <template v-slot:activator="{ on, attrs }">
               <div class="menu-text">
-                <v-btn href="#" depressed plain class="menu-text btn-selected">
+                <v-btn href="Home" depressed plain class="menu-text btn-selected">
                   Inicio
                 </v-btn>
                 <v-btn href="#" depressed plain class="menu-text">
                   Avisos
                 </v-btn>
-                <v-btn href="#" depressed plain class="menu-text">
+                <v-btn href="/Biblioteca" depressed plain class="menu-text">
                   Biblioteca
                 </v-btn>
                 <v-btn href="#" depressed plain class="menu-text">
@@ -61,7 +61,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="" depressed plain
+                  ><v-btn href="#" depressed plain
                     >Cerrar Sesion</v-btn
                   ></v-list-item-title
                 >
@@ -87,7 +87,7 @@
                 ><v-btn
                   id="navbar-inicio"
                   class="btn-selected"
-                  href="/#"
+                  href="Home"
                   depressed
                   plain
                   >Inicio</v-btn
@@ -96,35 +96,35 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-avisos" href="/#" depressed plain
+                ><v-btn id="navbar-avisos" href="#" depressed plain
                   >Avisos</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-biblio" href="/#" depressed plain
+                ><v-btn id="navbar-biblio" href="Biblioteca" depressed plain
                   >Biblioteca</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-portal" href="/" depressed plain
+                ><v-btn id="navbar-portal" href="#" depressed plain
                   >Mi Portal</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-perfil" href="/" depressed plain
+                ><v-btn id="navbar-perfil" href="#" depressed plain
                   >Mi Perfil</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" href="/" depressed plain
+                ><v-btn color="red" href="#" depressed plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >
