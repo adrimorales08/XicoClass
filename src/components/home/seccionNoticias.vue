@@ -24,7 +24,7 @@ export default {
     
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=gibran")
         .then((datos) => datos.json())
 
         .then((datos) => {
