@@ -10,30 +10,60 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Login" */ "../views/Auth/Login.vue"),
   },
-
+  {
+    path: "/LoginDocente",
+    name: "LoginDocente",
+    component: () =>
+      import(/* webpackChunkName: "Login" */ "../views/Auth/LoginDocente.vue"),
+  },
   {
     path: "/Home",
     name: "Home",
     component: () => import(/* webpackChunkName: "Home" */ "../views/Home.vue"),
   },
-
   {
-    path: "/About",
-    name: "About",
+    path: "/Avisos",
+    name: "Avisos",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(/* webpackChunkName: "Avisos" */ "../views/Avisos.vue"),
   },
   {
     path: "/Biblioteca",
     name: "Biblioteca",
     component: () =>
-      import(/* webpackChunkName: "Home" */ "../views/Biblioteca.vue"),
+      import(/* webpackChunkName: "Biblioteca" */ "../views/Biblioteca.vue"),
   },
   {
-    path: "/avisos",
-    name: "avisos",
+    path: "/MiPortal",
+    name: "MiPortal",
     component: () =>
-      import(/* webpackChunkName: "Home" */ "../views/avisos.vue"),
+      import(/* webpackChunkName: "Biblioteca" */ "../views/MiPortal.vue"),
+  },
+  {
+    path: "/MiPerfil",
+    name: "MiPerfil",
+    component: () =>
+      import(/* webpackChunkName: "Biblioteca" */ "../views/MiPerfil.vue"),
+  },
+  {
+    path: "/AcercaDe",
+    name: "AcercaDe",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/AcercaDe.vue"),
+  },
+  {
+    path: "/ApartadoLegal",
+    name: "ApartadoLegal",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/legal/ApartadoLegal.vue"
+      ),
+  },
+  {
+    path: "/Equipo",
+    name: "Equipo",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/legal/Equipo.vue"),
   },
 ];
 

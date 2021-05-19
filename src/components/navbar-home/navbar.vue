@@ -28,16 +28,21 @@
           <v-menu offset-y dark>
             <template v-slot:activator="{ on, attrs }">
               <div class="menu-text">
-                <v-btn href="Home" depressed plain class="menu-text btn-selected">
+                <v-btn
+                  href="/Home"
+                  depressed
+                  plain
+                  class="menu-text btn-selected"
+                >
                   Inicio
                 </v-btn>
-                <v-btn href="/avisos" depressed plain class="menu-text">
+                <v-btn href="/Avisos" depressed plain class="menu-text">
                   Avisos
                 </v-btn>
                 <v-btn href="/Biblioteca" depressed plain class="menu-text">
                   Biblioteca
                 </v-btn>
-                <v-btn href="#" depressed plain class="menu-text">
+                <v-btn href="/MiPortal" depressed plain class="menu-text">
                   Mi Portal
                 </v-btn>
                 <v-btn
@@ -54,14 +59,14 @@
             <v-list light>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="#" depressed plain
+                  ><v-btn href="/MiPerfil" depressed plain
                     >Mi Perfil</v-btn
                   ></v-list-item-title
                 >
               </v-list-item>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="#" depressed plain
+                  ><v-btn href="/" depressed plain
                     >Cerrar Sesion</v-btn
                   ></v-list-item-title
                 >
@@ -87,7 +92,7 @@
                 ><v-btn
                   id="navbar-inicio"
                   class="btn-selected"
-                  href="Home"
+                  href="/Home"
                   depressed
                   plain
                   >Inicio</v-btn
@@ -96,35 +101,35 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-avisos" href="#" depressed plain
+                ><v-btn id="navbar-avisos" href="/Avisos" depressed plain
                   >Avisos</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-biblio" href="Biblioteca" depressed plain
+                ><v-btn id="navbar-biblio" href="/Biblioteca" depressed plain
                   >Biblioteca</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-portal" href="#" depressed plain
+                ><v-btn id="navbar-portal" href="/MiPortal" depressed plain
                   >Mi Portal</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-perfil" href="#" depressed plain
+                ><v-btn id="navbar-perfil" href="/MiPerfil" depressed plain
                   >Mi Perfil</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" href="#" depressed plain
+                ><v-btn color="red" href="/" depressed plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >
@@ -152,6 +157,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .navbar {
   display: block;
   height: 100px;
