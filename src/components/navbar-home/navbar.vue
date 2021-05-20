@@ -101,7 +101,7 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-avisos" href="/Avisos" depressed plain
+                ><v-btn id="navbar-avisos" href="/avisos" depressed plain
                   >Avisos</v-btn
                 ></v-list-item-title
               >

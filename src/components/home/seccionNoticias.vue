@@ -71,18 +71,16 @@ export default {
     };
   },
   methods: {
-    Obtener() {
+     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
         .then((datos) => datos.json())
-
         .then((datos) => {
-          vue.losDatos = datos[0][8];
+          vue.losDatos = datos;
           console.log(vue.losDatos); //esto solo muestra
         });
     },
-  },
-
+ },
   mounted() {
     this.Obtener();
   },

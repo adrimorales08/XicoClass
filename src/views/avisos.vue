@@ -36,7 +36,7 @@
         sm="12"
         md="6"
         lg="3"
-        v-for="user in losDatos"
+        v-for="user in losDatos1"
         :key="user[user]"
       >
         <v-card class="sizes" color="#f8b725" dark>
@@ -60,7 +60,7 @@
         sm="12"
         md="6"
         lg="3"
-        v-for="user in losDatos"
+        v-for="user in losDatos2"
         :key="user[user]"
       >
         <v-card class="sizes" color="#349ff4" dark>
@@ -95,22 +95,43 @@ export default {
   data() {
     return {
       losDatos: [],
+      losDatos1: [],
+      losDatos2: [],
     };
   },
   methods: {
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
         .then((datos) => datos.json())
-
         .then((datos) => {
           vue.losDatos = datos;
           console.log(vue.losDatos); //esto solo muestra
         });
     },
+    Obtener1() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=2")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.losDatos1 = datos;
+          console.log(vue.losDatos1); //esto solo muestra
+        });
+    },
+      Obtener2() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=3")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.losDatos2 = datos;
+          console.log(vue.losDatos1); //esto solo muestra
+        });
+    },
   },
   mounted() {
     this.Obtener();
+    this.Obtener1();
+    this.Obtener2();
   },
 };
 </script>
