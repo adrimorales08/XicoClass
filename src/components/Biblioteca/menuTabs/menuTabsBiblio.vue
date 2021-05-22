@@ -2,10 +2,10 @@
   <div class="menuTabs">
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
-      <v-tabs fixed-tabs class="menu-tabs" color="#30dba0!important">
-        <v-tab @click="texto = 'Materia Impreso'"> MATERIAL IMPRESO </v-tab>
-        <v-tab @click="texto = 'Material Didactico'"> MATERIAL VISUAL </v-tab>
-        <v-tab @click="texto = 'Material Didactico'"> MATERIAL DIDACTICO </v-tab>
+      <v-tabs grow class="menu-tabs" color="#30dba0!important">
+        <v-tab @click="(texto = 'Materia Impreso'),setImpreso()"> MATERIAL IMPRESO </v-tab>
+        <v-tab @click="(texto = 'Material Visual'),setVisual()"> MATERIAL VISUAL </v-tab>
+        <v-tab @click="(texto = 'Material Didactico'),setDidactico()"> MATERIAL DIDACTICO </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -63,7 +63,6 @@
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
-
           </v-list>
         </v-menu>
       </div>
@@ -73,11 +72,22 @@
 
 <script>
 export default {
-  name: "menuTabs",
+  name: "menuTabsBiblio",
   data() {
     return {
       texto: "Material",
     };
+  },
+  methods: {
+    setImpreso() {
+      this.$store.commit("setImpresoTab");
+    },
+    setVisual() {
+      this.$store.commit("setVisualTab");
+    },
+    setDidactico() {
+      this.$store.commit("setDidacticoTab");
+    },
   },
 };
 </script>
@@ -85,7 +95,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 .menu-tabs {
-  max-width: 80%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
