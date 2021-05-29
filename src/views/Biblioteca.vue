@@ -16,6 +16,9 @@
         <v-window-item :value="3">
           <didactico></didactico>
         </v-window-item>
+        <v-window-item :value="4">
+          <xicostore></xicostore>
+        </v-window-item>
       </v-window>
     </div>
 
@@ -28,9 +31,10 @@
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 import menuTabsBiblio from "@/components/Biblioteca/menuTabs/menuTabsBiblio.vue";
-import impreso from '../components/Biblioteca/windows/impreso.vue';
-import visual from '../components/Biblioteca/windows/visual.vue';
-import didactico from '../components/Biblioteca/windows/didactico.vue';
+import impreso from "../components/Biblioteca/windows/impreso.vue";
+import visual from "../components/Biblioteca/windows/visual.vue";
+import didactico from "../components/Biblioteca/windows/didactico.vue";
+import xicostore from "../components/Biblioteca/windows/xicostore.vue";
 
 export default {
   name: "Biblioteca",
@@ -42,6 +46,7 @@ export default {
     impreso,
     visual,
     didactico,
+    xicostore,
   },
   data() {
     return {};

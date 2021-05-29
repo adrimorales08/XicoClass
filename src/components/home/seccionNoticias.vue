@@ -12,13 +12,9 @@
           </v-card-title>
           <v-card-subtitle class="texto">{{ losDatos[2] }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn
-      color="#f45b69"
-      dark
-      v-bind:href="''+losDatos[5]"
-    >
-      Enlace
-    </v-btn>
+            <v-btn color="#f45b69" dark v-bind:href="'' + losDatos[5]">
+              Enlace
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

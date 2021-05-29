@@ -28,24 +28,25 @@
           <v-row class="acciones" align-content="space-around">
             <v-col cols="6">
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
-              <template>
                 <!-- AQUI VA UN: V-FOR -->
-                <v-chip class="mx-2" @click="DescargarArchivo(id)">
-                  Este Es Un Documento
+                <template >
+                  <div v-for="(archivo,i) in archivos" :key="i"> 
+                  <div v-if="archivo[4]==item[0]">
+                <v-chip class="mx-2" @click="DescargarArchivo(archivo[2])">
+                  {{archivo[1]}}
                 </v-chip>
-                <v-chip class="ma-2" @click="DescargarArchivo(id)">
-                  Este Es Otro Documento
-                </v-chip>
+                </div>
+                  </div>
               </template>
             </v-col>
             <v-col cols="6">
               <span class="texto-trabajo">MI TRABAJO:</span>
               <!-- AQUI SUBEN EL ARCHIVO -->
-              <template v-if="archivos">
-                <v-chip class="ma-2">+</v-chip>
+              <template v-if="archivosAlumno !==null">
+                <v-chip class="ma-2">+1</v-chip>
               </template>
-              <template v-if="archivos == null">
-                <v-chip class="ma-2" @click="SubirArchivo()">+</v-chip>
+              <template v-if="archivosAlumno == null">
+                <v-chip class="ma-2" @click="SubirArchivo()">+2</v-chip>
               </template>
               <v-btn class="boton-entregar" color="green" dark>
                 Entregar
@@ -63,25 +64,40 @@ export default {
   name: "misTareas",
   data() {
     return {
+      archivos: [],
+      archivosAlumno:[],
       Tareas: [],
-      archivos: null,
     };
   },
   methods: {
-    DescargarArchivo() {},
-    SubirArchivo() {},
+    DescargarArchivo(id) {
+      window.open(''+id, '_blank');
+    },
+    SubirArchivo() {
+      window.alert('si funca loco');
+    },
     Tarea() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/TareasApi.php?ap=1")
+      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=1&ap=1")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.Tareas = datos;
           console.log(vue.Tareas); //esto solo muestra
         });
     },
+    Archivo(){
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=2")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.archivos = datos;
+          console.log(vue.archivos); //esto solo muestra
+        });
+    },
   },
 mounted() {
     this.Tarea();
+    this.Archivo();
   },
 };
 </script>

@@ -20,13 +20,9 @@
           </v-card-title>
           <v-card-subtitle class="texto">{{ user[2] }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn
-      color="#f45b69"
-      dark
-      v-bind:href="''+user[5]"
-    >
-      Enlace
-    </v-btn>
+            <v-btn color="#f45b69" dark v-bind:href="'' + user[5]">
+              Enlace
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -52,13 +48,9 @@
             <v-btn text>
               {{ user[4] }}
             </v-btn>
-            <v-btn
-      color="#f8b725"
-      dark
-      v-bind:href="''+user[5]"
-    >
-      Enlace
-    </v-btn>
+            <v-btn color="#f8b725" dark v-bind:href="'' + user[5]">
+              Enlace
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -83,17 +75,13 @@
             <v-btn text>
               {{ user[4] }}
             </v-btn>
-            <v-btn
-      color="#349ff4"
-      dark
-      v-bind:href="''+user[5]"
-    >
-      Enlace
-    </v-btn>
+            <v-btn color="#349ff4" dark v-bind:href="'' + user[5]">
+              Enlace
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
-    </v-row>    
+    </v-row>
     <footerHome></footerHome>
   </div>
 </template>
@@ -166,12 +154,12 @@ export default {
   color: #f45b69;
 }
 #ods {
-    font-family: "Montserrat";
+  font-family: "Montserrat";
   margin-left: 20px;
   margin-right: 20px;
 }
 .v-card {
-    font-family: "Montserrat";
+  font-family: "Montserrat";
   margin-left: 20px;
   margin-bottom: 10px;
   margin-top: 10px;

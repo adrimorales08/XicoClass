@@ -69,6 +69,16 @@
                   Mi Portal
                 </v-btn>
                 <v-btn
+                id="Evaluacion"
+                href="/Evaluacion"
+                depressed
+                plain
+                class="menu-text"
+                @click="setEvaluacion()"
+                >
+                  Evaluacion
+                </v-btn>
+                <v-btn
                   id="MiPerfil"
                   depressed
                   plain
